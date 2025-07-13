@@ -190,8 +190,4 @@ pytest tests/
 
 MIT License
 
----
 
-## 🔗 Submission
-
-Upload this repository to GitHub and share the link as your project submission.
