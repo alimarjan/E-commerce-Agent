@@ -1,4 +1,5 @@
 # Intelligent E-commerce Order Processing Agent
+<img width="1430" height="623" alt="image" src="https://github.com/user-attachments/assets/b18de634-44d1-487b-bbd9-4b29cb8597d9" />
 
 ## Project Overview
 
