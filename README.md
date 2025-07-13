@@ -1,6 +1,7 @@
 # 🤖 LLM Support Agent
 <img width="1424" height="706" alt="image" src="https://github.com/user-attachments/assets/e240fbee-99c2-4f9e-b018-495d5506d1d2" />
 
+<img width="622" height="350" alt="image" src="https://github.com/user-attachments/assets/bc35fef5-1cbd-4caf-8693-c8e5c349c714" />
 
 An AI-powered customer support message classification system built with FastAPI and React. This application automatically categorizes customer support messages and suggests appropriate actions using OpenAI's GPT-4.
 
