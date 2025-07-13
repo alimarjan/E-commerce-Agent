@@ -1,5 +1,235 @@
 # 🤖 LLM Support Agent
 <img width="1424" height="706" alt="image" src="https://github.com/user-attachments/assets/e240fbee-99c2-4f9e-b018-495d5506d1d2" />
+````markdown
+````markdown
+````markdown
+````markdown
+# Intelligent E-commerce Order Processing Agent
+
+## Assignment Overview
+
+This project fulfills the assignment requirements to create an autonomous agent that automates problems in the e-commerce domain, with **LLM-driven control flow** making all critical decisions throughout the application lifecycle.
+
+**Assignment Requirements Met:**
+- ✅ **Agent of Choice**: E-commerce Order Processing Agent
+- ✅ **Field of Choice**: E-commerce/Retail Operations
+- ✅ **LLM-Controlled Flow**: All decision-making handled by GPT-4
+- ✅ **Production Ready**: Full-stack application with proper architecture
+- ✅ **GitHub Repository**: Complete codebase with documentation
+
+## 🎯 Problem Domain: E-commerce Order Processing
+
+**Real-World Problem Solved:**
+E-commerce businesses struggle with manual order processing, leading to delays, errors, and poor customer experience. This agent automates the entire order lifecycle using AI-driven decision making.
+
+**Key Challenges Addressed:**
+- Manual order validation (time-consuming, error-prone)
+- Fraud detection requiring pattern recognition
+- Inventory management decisions
+- Customer communication personalization
+- Business process optimization
+
+## 🧠 LLM-Driven Control Flow
+
+**The LLM (GPT-4) controls ALL decision-making processes:**
+
+### 1. Order Processing Decisions
+```python
+# LLM decides: approve, review, reject, or escalate
+decision = await llm_service.analyze_order(order_data)
+if decision.action == "approve":
+   ` await process_payment()
+eli`f decision.action == "review":
+   ` await flag_for_manual_review(decision.reason)
+
+````
+
+
+
+### 2. Fraud Detection Logic
+
+```python
+# LLM analyzes patterns and makes fraud assessments
+
+fraud_analysis = await llm_service.detect_fraud(order, customer_history)
+
+risk_level = fraud_analysis.risk_score
+```
+
+
+### 3. Inventory Management
+
+
+```python
+# LLM decides reorder quantities and timing
+
+inventory_decision = await llm_service.analyze_inventory(stock_levels, trends)
+if inventory_decision.should_reorder:
+    await place_supplier_order(inventory_decision.quantity)
+
+
+```
+
+### 4. Customer Communication
+
+
+```python
+# LLM generates personalized messages
+message = await llm_service.generate_customer_message(context, customer_profile)
+
+javascript
+await send_communication(customer.email, message)
+```
+
+### 5. Business Analytics
+
+javascript
+```python
+# LLM provides insights and recommendations
+insights = await llm_service.analyze_business_metrics(sales_data, trends)
+recommendations = insights.optimization_suggestions
+
+```javascript
+
+
+## javascript🏗️ Production-Ready Architecture
+
+### Backend (FastAPI + Python)
+
+```javascript
+app/
+
+├──javascript agent/
+│   └── core.py              # Main LLM-driven orchestrator
+├── services/
+
+│ __└── llm_servic__.py      # OpenAI GPT-4 integration
+├─__models/__
+│ __└── schemas.py    __     # Pydantic data models
+____
+├─____javascript utils/
+____│   └── helpers.py           # Utility functions
+└─__main.py       __         # FastAPI application
+____
+``____
+____
+##__Frontend (React + __peScript)
+__
+__
+``__avas__ipt
+cl__nt/__
+├─__src/__
+____
+│ __├── components__         # Reusable UI components
+
+│ __├── pag__/              # Application pages
+│ __└── services/     __    # API integration
+└─__package.json__
+
+``____
+____
+##__Production Fea__res
+____
+- __Error Handling__: Comprehensive exception management
+
+- __Logging__: Structured logging with rotation
+- __Environment Config__: Secure environment variable management
+- __API Documenta
+tion__: Auto-generated OpenAPI/Swagger docs
+- __CORS__: Proper cross-origin resource sharing
+
+- __Health Checks__: System monitoring endpoints
+- __Docker Support__: Containerized deployment
+- __Testing__: Unit and integration test suite
+
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.11+
+
+- Node.js 18+
+- OpenAI API Key
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/alimarjan/E-commerce-Agent.git
+cd E-commerce-Agent
+
+
+# __tup envi__nment
+cp__en__v.example .env
+# __d your OPENAI_API__EY to .env file
+____
+# Run application (automated setup)
+chmod +x start.sh
+./start.sh
+```
+
+____
+###__anual Setup__
+____
+``___sh___
+# __ckend setup__
+py__on -m venv venv__
+
+so___e ven__bin/__tivate
+____pip install -r requirements.txt
+____
+____# Frontend setup
+cd client
+
+
+npm__nstal__
+cd ____
+____
+# ___rt bac___d
+cd__pp__
+uv__orn main:app --re__ad --host 0.0.0.0 --port 8000 &
+
+_______# S__rt frontend__cd __ient__npm__un dev__    _______ ## __ Application__RLs
+_______
+- ___ronten___: http://localhost:5173
+- __Backend API__: http://localhost:8000
+- __API Documentati
+on__:
+ http://localhost:8000/docs
+- ___ealth__heck__: http://localhos ____ ## __ LLM Dec__ion Examples ____ ### Order Processing Flow   1. __Input__: New order received 2. __LLM Analysis__: Evaluates customer, products, payment, shipping
+3. __Decision__: Approve/Review/Reject with reasoning
+4. __Action__: Automated processing based on LLM decision
+
+### Fraud Detection Flow
+
+
+1. __Input__: Order + customer hist 2. __LLM Analysis__: Pattern recogn 3. __Decision__: Risk score and recommended 4. __Action__: Block/Allow/Flag for revie  ### Inventory Management Flow  1. __Input__: Current stock levels + sales trends + seasonality 2. __LLM Analysis__: Demand forecasting and optimization
+3. __Decision__: Reorder recommendations with quantities
+4. __Ac
+tion__: Automated supplier communications
+
+## 🔧 API Endpoints
+
+
+| Endpoint | Method | Description | |----------|--------|-------------| | `/` | GET | Application info and status | | `/health` | GET | System health check | | `/api/orders/process` | POST | Process new order (LLM-driven) | | `/api/orders/{id}/status` | GET | Get order status | | `/api/inventory/check` | POST | Inventory analysis (LLM-driven) | | `/api/analytics/dashboard` | GET | Business insights (LLM-generated) | | `/api/communication/send` | POST | Send customer message (LLM-generated) |
+
+## 🧪 Testing the Age
+
+nt
+
+### Test Order Processingt"s/localhost:8000/health
+```
+
+## 📈 Production Deployment
+ki### Environment Variables
+
+```bash
+OPENAI_API_KEY=your_openai_api_key
+DATABASE_URL=your_database_url
+SECRET_KEY=your_secret_key
+DEBUG=False
+```
 
 
 An AI-powered customer support message classification system built with FastAPI and React. This application automatically categorizes customer support messages and suggests appropriate actions using OpenAI's GPT-4.
